@@ -40,7 +40,7 @@ sleep 0.5
 }
 IZIN=$(curl -sS https://raw.githubusercontent.com/lunoxxdev/d4l4nW3dUs/main/ip | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
-echo "IZIN DI TERIMA!!"
+echo -e "[ ${GREEN}INGFO${NC} ] Monggo Masse :)"
 CEKEXPIRED
 else
 echo -e "[ ${GREEN}INGFO${NC} ] Ditolak Mentah-Mentah Awkaowkaowkao"
