@@ -203,7 +203,6 @@ rm -f /root/senmenu.sh
 rm -f /root/xraymode.sh
 rm -f /root/xray.conf
 history -c
-secs_to_human "$(($(date +%s) - ${start}))"
 echo -e "${YB}[ WARNING ] reboot now ? (Y/N)${NC} "
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
