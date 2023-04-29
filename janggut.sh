@@ -81,11 +81,16 @@ elif [[ -e /etc/centos-release ]]; then
 fi
 
 echo -e "[ ${GREEN}INGFO${NC} ] Mari Mangan Enake"
+sleep 2
 echo -e "[ ${GREEN}INGFO${NC} ] Ngudud"
+sleep 2
 echo -e "[ ${GREEN}INGFO${NC} ] Ngopi"
+sleep 2
 echo -e "[ ${GREEN}INGFO${NC} ] Ngocok"
+sleep 2
 echo -e "[ ${GREEN}INGFO${NC} ] Embuh Cokk"
-echo "Lanjutt"
+sleep 2
+echo -e "[ ${GREEN}INGFO${NC} ] Okeh Lanjutt"
 sleep 2
 
 /etc/init.d/vnstat restart >/dev/null 2>&1
