@@ -51,29 +51,20 @@ export Auther="XdrgVPN"
 
 # status
 rm -rf /root/status
-wget -q -O /root/status "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/statushariini"
+wget -q -O /root/status "https://raw.githubusercontent.com/lunoxxdev/n3mum4n3hhhh3h3/main/statushariini"
 
 
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "memeriksa vps anda"
+echo -e "[ ${GREEN}INGFO${NC} ] Mrekso VPS Mu Cokk..!!!! Sabarrr"
 sleep 0.5
-CEKEXPIRED () {
-        today=$(date -d +1day +%Y -%m -%d)
-        Exp1=$(curl -sS https://raw.githubusercontent.com/lunoxxdev/d4l4nW3dUs/main/ip | grep $MYIP | awk '{print $3}')
-        if [[ $today < $Exp1 ]]; then
-        echo "status script aktif.."
-        else
-        echo "SCRIPT ANDA EXPIRED";
-        exit 0
-fi
 }
 IZIN=$(curl -sS https://raw.githubusercontent.com/lunoxxdev/d4l4nW3dUs/main/ip | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo "IZIN DI TERIMA!!"
 CEKEXPIRED
 else
-echo "Akses di tolak!! Benget sia hurung!!";
+echo -e "[ ${GREEN}INGFO${NC} ] Ditolak Mentah-Mentah Awkaowkaowkao"
 exit 0
 fi
 # // Root Checking
