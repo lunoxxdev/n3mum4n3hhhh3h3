@@ -173,7 +173,7 @@ echo "1.1" >> /home/.ver
 rm -fr /root/limit
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[   Cuaksszz ]-===================="
+echo "=====================-[ Lunoxx Impostor ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -214,7 +214,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script by azigaming404 ]-==============="
+echo "===============-[ Script by Lunoxx Impostor ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
