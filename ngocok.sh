@@ -33,10 +33,19 @@ export UNDERLINE="\e[4m"
 if [ "${EUID}" -ne 0 ]; then
 echo -e "${EROR} Please Run This Script As Root User !"
 exit 1
+# Getting
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo -e "[ ${GREEN}INGFO${NC} ] Mrekso VPS Mu Cokk..!!!! Sabarrr"
+sleep 0.5
+}
+IZIN=$(curl -sS https://raw.githubusercontent.com/lunoxxdev/d4l4nW3dUs/main/ip | awk '{print $4}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+echo "IZIN DI TERIMA!!"
+CEKEXPIRED
+else
+echo -e "[ ${GREEN}INGFO${NC} ] Ditolak Mentah-Mentah Awkaowkaowkao"
+exit 0
 fi
-export IP=$( curl -s https://ipinfo.io/ip/ )
-export NETWORK_IFACE="$(ip route show to default | awk '{print $5}')"
-if [[ -r /etc/xray/domain ]]; then
 clear
 echo -e "${INFO} Having Script Detected !"
 echo -e "${INFO} If You Replacing Script, All Client Data On This VPS Will Be Cleanup !"
