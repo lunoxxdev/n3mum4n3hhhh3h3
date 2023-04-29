@@ -34,20 +34,6 @@ if [ "${EUID}" -ne 0 ]; then
 echo -e "${EROR} Please Run This Script As Root User !"
 exit 1
 
-# Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-IZIN=$(curl -sS https://raw.githubusercontent.com/lunoxxdev/d4l4nW3dUs/main/ip | awk '{print $4}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo "IZIN DI TERIMA!!"
-CEKEXPIRED
-else
-echo -e "[ ${GREEN}INGFO${NC} ] Ditolak Mentah-Mentah Awkaowkaowkao"
-exit 0
-fi
-# // Root Checking
-if [ "${EUID}" -ne 0 ]; then
-                echo -e "${EROR} Please Run This Script As Root User !"
-                exit 1
 clear
 fi
 echo -e "${GREEN}Sabar Cokk!!............${NC}"
