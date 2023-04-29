@@ -140,7 +140,7 @@ echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
 }
-wget -q -O /root/status "https://raw.githubusercontent.com/Azigaming404/Autoscript-by-azi/main/statushariini"
+wget -q -O /root/status "https://raw.githubusercontent.com/lunoxxdev/n3mum4n3hhhh3h3/main/statushariini"
 LocalVersion=$(cat /root/versi)
 IPVPS=$(curl -s ipinfo.io/ip )
 ISPVPS=$( curl -s ipinfo.io/org )
