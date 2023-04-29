@@ -45,27 +45,6 @@ echo -e "[ ${GREEN}INGFO${NC} ] Ditolak Mentah-Mentah Awkaowkaowkao"
 exit 0
 fi
 clear
-echo -e "${INFO} Having Script Detected !"
-echo -e "${INFO} If You Replacing Script, All Client Data On This VPS Will Be Cleanup !"
-read -p "Are You Sure Wanna Replace Script ? (Y/N) " lanjutkan
-if [[ $lanjutkan == "Y" ]]; then
-clear
-echo -e "${INFO} Starting Replacing Script !"
-elif [[ $lanjutkan == "y" ]]; then
-clear
-echo -e "${INFO} Starting Replacing Script !"
-rm -rf /var/lib/scrz-prem
-elif [[ $lanjutkan == "N" ]]; then
-echo -e "${INFO} Action Canceled !"
-exit 1
-elif [[ $lanjutkan == "n" ]]; then
-echo -e "${INFO} Action Canceled !"
-exit 1
-else
-echo -e "${EROR} Your Input Is Wrong !"
-exit 1
-fi
-clear
 fi
 echo -e "${GREEN}Starting Installation............${NC}"
 cd /root/
