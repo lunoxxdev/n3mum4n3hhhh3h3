@@ -37,7 +37,6 @@ exit 1
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo -e "[ ${GREEN}INGFO${NC} ] Mrekso VPS Mu Cokk..!!!! Sabarrr"
-fi
 IZIN=$(curl -sS https://raw.githubusercontent.com/lunoxxdev/d4l4nW3dUs/main/ip | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo "IZIN DI TERIMA!!"
