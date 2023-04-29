@@ -46,7 +46,7 @@ exit 0
 fi
 clear
 fi
-echo -e "${GREEN}Starting Installation............${NC}"
+echo -e "${GREEN}Sabar Cokk!!............${NC}"
 cd /root/
 apt update -y
 apt-get --reinstall --fix-missing install -y sudo dpkg psmisc socat jq ruby wondershaper python2 tmux nmap bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget vim net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential gcc g++ automake make autoconf perl m4 dos2unix dropbear libreadline-dev zlib1g-dev libssl-dev dirmngr libxml-parser-perl neofetch git lsof iptables iptables-persistent
