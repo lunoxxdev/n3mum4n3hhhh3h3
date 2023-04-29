@@ -80,8 +80,12 @@ elif [[ -e /etc/centos-release ]]; then
 	OS=centos
 fi
 
-echo "janggut"
-echo "Progress..."
+echo -e "[ ${GREEN}INGFO${NC} ] Mari Mangan Enake"
+echo -e "[ ${GREEN}INGFO${NC} ] Ngudud"
+echo -e "[ ${GREEN}INGFO${NC} ] Ngopi"
+echo -e "[ ${GREEN}INGFO${NC} ] Ngocok"
+echo -e "[ ${GREEN}INGFO${NC} ] Embuh Cokk"
+echo "Lanjutt"
 sleep 2
 
 /etc/init.d/vnstat restart >/dev/null 2>&1
