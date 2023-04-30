@@ -31,24 +31,36 @@ export BOLD="\e[1m"
 export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 if [ "${EUID}" -ne 0 ]; then
+
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo -e "[ ${GREEN}INGFO${NC} ] Mrekso VPS Mu Cokk..!!!! Sabarrr"
 sleep 2
+CEKEXPIRED () {
+        today=$(date -d +1day +%Y -%m -%d)
+        Exp1=$(curl -sS https://raw.githubusercontent.com/lunoxxdev/d4l4nW3dUs/main/ip | grep $MYIP | awk '{print $3}')
+        if [[ $today < $Exp1 ]]; then
+        echo "Status Script Aktif.."
+        else
+        echo -e "[ ${GREEN}INGFO${NC} ] Ditolak Mentah-Mentah Awkaowkaowkao";
+        exit 0
+fi
+}
 IZIN=$(curl -sS https://raw.githubusercontent.com/lunoxxdev/d4l4nW3dUs/main/ip | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
-echo "IZIN DI TERIMA!!"
+echo -e "[ ${GREEN}INGFO${NC} ] Lanjut Masse..!!!"
 CEKEXPIRED
 else
-echo -e "[ ${GREEN}INGFO${NC} ] Ditolak Mentah-Mentah Awkaowkaowkao"
+echo -e "[ ${GREEN}INGFO${NC} ] Ditolak Mentah-Mentah Awkaowkaowkao";
 exit 0
 fi
+
+
 # // Root Checking
 if [ "${EUID}" -ne 0 ]; then
-                echo -e "${EROR} Please Run This Script As Root User !"
-                exit 1
-fi
-clear
+		echo -e "${EROR} Please Run This Script As Root User !"
+		exit 1
+
 fi
 echo -e "${GREEN}Sabar Cokk!!............${NC}"
 cd /root/
