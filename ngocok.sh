@@ -32,11 +32,6 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 if [ "${EUID}" -ne 0 ]; then
 
-# // Root Checking
-if [ "${EUID}" -ne 0 ]; then
-		echo -e "${EROR} Please Run This Script As Root User !"
-		exit 1
-
 fi
 echo -e "[ ${GREEN}Install${NC} ] Loading Su Sabar ...!!!"
 cd /root/
