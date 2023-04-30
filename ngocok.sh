@@ -32,37 +32,13 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 if [ "${EUID}" -ne 0 ]; then
 
-# Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo -e "[ ${GREEN}INGFO${NC} ] Mrekso VPS Mu Cokk..!!!! Sabarrr"
-sleep 2
-CEKEXPIRED () {
-        today=$(date -d +1day +%Y -%m -%d)
-        Exp1=$(curl -sS https://raw.githubusercontent.com/lunoxxdev/d4l4nW3dUs/main/ip | grep $MYIP | awk '{print $3}')
-        if [[ $today < $Exp1 ]]; then
-        echo "Status Script Aktif.."
-        else
-        echo -e "[ ${GREEN}INGFO${NC} ] Ditolak Mentah-Mentah Awkaowkaowkao";
-        exit 0
-fi
-}
-IZIN=$(curl -sS https://raw.githubusercontent.com/lunoxxdev/d4l4nW3dUs/main/ip | awk '{print $4}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo -e "[ ${GREEN}INGFO${NC} ] Lanjut Masse..!!!"
-CEKEXPIRED
-else
-echo -e "[ ${GREEN}INGFO${NC} ] Ditolak Mentah-Mentah Awkaowkaowkao";
-exit 0
-fi
-
-
 # // Root Checking
 if [ "${EUID}" -ne 0 ]; then
 		echo -e "${EROR} Please Run This Script As Root User !"
 		exit 1
 
 fi
-echo -e "${GREEN}Sabar Cokk!!............${NC}"
+echo -e "[ ${GREEN}Install${NC} ] Loading Su Sabar ...!!!"
 cd /root/
 apt update -y
 apt-get --reinstall --fix-missing install -y sudo dpkg psmisc socat jq ruby wondershaper python2 tmux nmap bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget vim net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential gcc g++ automake make autoconf perl m4 dos2unix dropbear libreadline-dev zlib1g-dev libssl-dev dirmngr libxml-parser-perl neofetch git lsof iptables iptables-persistent
